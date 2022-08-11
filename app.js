@@ -22,7 +22,7 @@ const gridDisplay = document.querySelector('#grid');
 function createBoard() {
     for (let i = 0; i < cardsArray.length; i++) {
         const card = document.createElement('img')
-        card.setAttribute('src', 'img/bacon.png')
+        card.setAttribute('src', 'img/blank.png')
         card.setAttribute('data-id', i)
         gridDisplay.appendChild(card)
 
