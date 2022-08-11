@@ -1,0 +1,60 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', 'SF Mono', 'Cascadia Mono', 'Ubuntu Mono', 'Consolas', monospace;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: salmon;
+}
+
+
+
+/* COMPONENTS */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 2rem;
+}
+
+#grid {
+    width: 60%;
+    margin: 1rem auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-color: rgb(235, 235, 235);
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #eee;
+        background: #1a1a1a;
+    }
+
+    #grid {
+        background-color: rgb(44, 44, 44);
+    }
+}
