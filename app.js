@@ -1,4 +1,4 @@
-cardsArray = [
+const cardsArray = [
     {
         name: 'fries',
         img: 'img/frenchFries.png',
@@ -17,13 +17,15 @@ cardsArray = [
     }
 ]
 
-
-cardsArray.sort(() => 0.5 - Math.random())
+function shuffle(arr) {
+    arr.sort(() => 0.5 - Math.random())
+}
 
 const gridDisplay = document.querySelector('#grid');
 
 function createBoard() {
     for (let index = 0; index < 2; index++) {
+        shuffle(cardsArray)
         for (let i = 0; i < cardsArray.length; i++) {
             const card = document.createElement('img')
 
@@ -44,11 +46,10 @@ const cardsChosen = []
 function flipCard() {
     console.log(cardsArray)
     let cardId = this.getAttribute('data-id')
-
-    console.log('you clicked', cardId)
+    // console.log('you clicked', cardId)
     // console.log(cardsArray[cardId].name)
     cardsChosen.push(cardsArray[cardId].name)
-    console.log(cardsChosen);
+    // console.log(cardsChosen);
 
     this.setAttribute('src', cardsArray[cardId].img)
 }
